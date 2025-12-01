@@ -1,6 +1,6 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "dist"
+  "outputDirectory": "dist",
   "redirects": [
     {
       "source": "/github",
@@ -9,7 +9,7 @@
     },
     {
       "source": "/linkedin",
-      "destination": "https://www.linkedin.com/in/jerryo-pradnatan-956a63329?trk=contact-info",
+      "destination": "https://linkedin.com/in/your-profile",
       "permanent": false
     },
     {
@@ -19,4 +19,3 @@
     }
   ]
 }
-
