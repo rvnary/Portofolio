@@ -70,19 +70,19 @@ export function Contact() {
               <h4 className="mb-4">Follow My Social</h4>
               <div className="flex gap-4">
                 <a
-                  href="#"
+                  href="/github"
                   className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors"
                 >
                   <Github size={20} />
                 </a>
                 <a
-                  href="www.linkedin.com/in/jerryo-pradnatan-956a63329"
+                  href="/linkedin"
                   className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors"
                 >
                   <Linkedin size={20} />
                 </a>
                 <a
-                  href="#"
+                  href="/twitter"
                   className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors"
                 >
                   <Twitter size={20} />
