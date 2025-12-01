@@ -30,6 +30,13 @@ const projects = [
     image: "https://github.com/rvnary/Portofolio/blob/main/justintano/dummy-image.png?raw=true",
     tags: ["Coming", "Coming", "Coming"],
   },
+  {
+    id: 5,
+    title: "Will be added soon",
+    description: "Will be added soon",
+    image: "https://github.com/rvnary/Portofolio/blob/main/justintano/dummy-image.png?raw=true",
+    tags: ["Coming", "Coming", "Coming"],
+  },
 ];
 
 export function Projects() {
