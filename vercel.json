@@ -3,7 +3,7 @@
   "outputDirectory": "dist",
   "redirects": [
     {
-      "source": "/github",
+      "source": "/instagram",
       "destination": "https://www.instagram.com/r4spbrrys/",
       "permanent": false
     },
@@ -19,6 +19,3 @@
     }
   ]
 }
-
-
-

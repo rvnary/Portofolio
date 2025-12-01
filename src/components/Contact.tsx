@@ -113,7 +113,7 @@ export function Contact() {
               <h4 className="mb-4">Follow My Social</h4>
               <div className="flex gap-4">
                 <a
-                  href="/github"
+                  href="/instagram"
                   className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors"
                 >
                   <Instagram size={20} />
