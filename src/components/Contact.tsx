@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, MapPin, Phone, Github, Linkedin, Twitter, Instagram } from "lucide-react";
 import { useState } from "react";
 
 export function Contact() {
@@ -107,7 +107,7 @@ export function Contact() {
                   href="/github"
                   className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors"
                 >
-                  <Github size={20} />
+                  <Instagram size={20} />
                 </a>
                 <a
                   href="/linkedin"
