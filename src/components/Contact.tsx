@@ -99,12 +99,11 @@ export function Contact() {
                 </div>
               </div>
             </div>
-
+{/* itu github aslinya instagram */}
             <div className="mt-8">
               <h4 className="mb-4">Follow My Social</h4>
               <div className="flex gap-4">
                 <a
-                  {/* aslinya ig bukan github */}
                   href="/github"
                   className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors"
                 >
