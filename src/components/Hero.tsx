@@ -41,7 +41,7 @@ export function Hero() {
       >
         <div>
           <div className="mb-8 inline-block">
-            <div className="w-32 h-32 flex items-center justify-center shadow-2xl">
+            <div className="w-32 h-32 flex items-center justify-center">
               <img src="https://raw.githubusercontent.com/rvnary/Portofolio/refs/heads/main/justintano/g_logo.svg" alt="logo"></img>
             </div>
           </div>
