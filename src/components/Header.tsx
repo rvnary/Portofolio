@@ -18,7 +18,7 @@ export function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 flex items-center justify-center">
               <img src="https://raw.githubusercontent.com/rvnary/Portofolio/refs/heads/main/justintano/g_logo.svg" alt="logo"></img>
             </div>
           </div>
