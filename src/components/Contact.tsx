@@ -7,15 +7,44 @@ export function Contact() {
     email: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    alert("Thank you for your message! I'll get back to you soon.");
-    setFormData({ name: "", email: "", message: "" });
+    setLoading(true);
+    setSubmitMessage("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitMessage(
+          "✓ Thank you for your message! I'll get back to you soon."
+        );
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setSubmitMessage("✗ Error: " + (data.error || "Failed to submit form"));
+      }
+    } catch (error) {
+      setSubmitMessage("✗ Error: Failed to submit form. Please try again.");
+      console.error("Form submission error:", error);
+    } finally {
+      setLoading(false);
+    }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -23,12 +52,17 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="relative z-20 py-20 px-6" style={{ backgroundColor: '#F8EFEA' }}>
+    <section
+      id="contact"
+      className="relative z-20 py-20 px-6"
+      style={{ backgroundColor: "#F8EFEA" }}
+    >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="mb-4">Contact Me</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Have a project in mind? Let's work together to create something amazing
+            Have a project in mind? Let's work together to create something
+            amazing
           </p>
         </div>
 
@@ -141,10 +175,22 @@ export function Contact() {
               </div>
               <button
                 type="submit"
-                className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors"
+                disabled={loading}
+                className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
               >
-                Send Message
+                {loading ? "Sending..." : "Send Message"}
               </button>
+              {submitMessage && (
+                <div
+                  className={`text-center py-2 px-4 rounded-lg ${
+                    submitMessage.startsWith("✓")
+                      ? "bg-green-100 text-green-700"
+                      : "bg-red-100 text-red-700"
+                  }`}
+                >
+                  {submitMessage}
+                </div>
+              )}
             </form>
           </div>
         </div>
