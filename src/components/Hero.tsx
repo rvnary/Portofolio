@@ -41,8 +41,8 @@ export function Hero() {
       >
         <div>
           <div className="mb-8 inline-block">
-            <div className="w-32 h-32 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center shadow-2xl">
-              <span className="text-white text-5xl">P</span>
+            <div className="w-32 h-32 flex items-center justify-center shadow-2xl">
+              <img src="https://raw.githubusercontent.com/rvnary/Portofolio/refs/heads/main/justintano/g_logo.svg" alt="logo"></img>
             </div>
           </div>
           <h1 className="text-white mb-4">
