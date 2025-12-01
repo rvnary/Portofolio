@@ -5,13 +5,39 @@ export default async function handler(
   request: VercelRequest,
   response: VercelResponse
 ) {
+  // Enable CORS
+  response.setHeader("Access-Control-Allow-Credentials", "true");
+  response.setHeader("Access-Control-Allow-Origin", "*");
+  response.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET,OPTIONS,PATCH,DELETE,POST,PUT"
+  );
+  response.setHeader(
+    "Access-Control-Allow-Headers",
+    "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
+  );
+
+  if (request.method === "OPTIONS") {
+    response.status(200).end();
+    return;
+  }
+
   try {
-    const supabaseUrl = process.env.SUPABASE_URL;
-    const supabaseKey = process.env.SUPABASE_ANON_KEY;
+    // Try both env variable names for compatibility
+    const supabaseUrl =
+      process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL;
+    const supabaseKey =
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ||
+      process.env.SUPABASE_ANON_KEY;
 
     if (!supabaseUrl || !supabaseKey) {
+      console.error("Missing env vars:", {
+        url: !!supabaseUrl,
+        key: !!supabaseKey,
+      });
       return response.status(500).json({
         error: "Missing Supabase environment variables",
+        debug: "SUPABASE_URL or SUPABASE_ANON_KEY not set",
       });
     }
 
@@ -32,10 +58,9 @@ export default async function handler(
         .from("contacts")
         .insert([
           {
-            name,
-            email,
-            message,
-            created_at: new Date().toISOString(),
+            name: String(name).trim(),
+            email: String(email).trim(),
+            message: String(message).trim(),
           },
         ])
         .select();
@@ -44,6 +69,7 @@ export default async function handler(
         console.error("Supabase insert error:", error);
         return response.status(500).json({
           error: "Failed to save contact message",
+          details: error.message,
         });
       }
 
@@ -79,6 +105,7 @@ export default async function handler(
     console.error("API error:", error);
     return response.status(500).json({
       error: "Internal server error",
+      message: error instanceof Error ? error.message : String(error),
     });
   }
 }
