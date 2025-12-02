@@ -4,12 +4,12 @@ import { ExternalLink } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "Will be added soon",
-    description: "Will be added soon",
+    title: "My Personal Logo",
+    description: "This is just my logo breakdown for my own personal branding and for refining my own skill on design.",
     image:
-      "https://github.com/rvnary/Portofolio/blob/main/justintano/dummy-image.png?raw=true",
-    tags: ["Coming", "Coming", "Coming"],
-    link: "https://drive.google.com",
+      "https://raw.githubusercontent.com/rvnary/Portofolio/refs/heads/main/justintano/logo%20breakdown.webp",
+    tags: ["Logo", "Design", "Personal"],
+    link: "https://drive.google.com/file/d/1W2nxV4iPkupxXOFTuc5G5y3hiLPAINiO/view?usp=drivesdk",
   },
   {
     id: 2,
