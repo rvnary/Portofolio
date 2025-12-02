@@ -6,47 +6,62 @@ const projects = [
     id: 1,
     title: "Will be added soon",
     description: "Will be added soon",
-    image: "https://github.com/rvnary/Portofolio/blob/main/justintano/dummy-image.png?raw=true",
+    image:
+      "https://github.com/rvnary/Portofolio/blob/main/justintano/dummy-image.png?raw=true",
     tags: ["Coming", "Coming", "Coming"],
+    link: "https://drive.google.com",
   },
   {
     id: 2,
     title: "Will be added soon",
     description: "Will be added soon",
-    image: "https://github.com/rvnary/Portofolio/blob/main/justintano/dummy-image.png?raw=true",
+    image:
+      "https://github.com/rvnary/Portofolio/blob/main/justintano/dummy-image.png?raw=true",
     tags: ["Coming", "Coming", "Coming"],
+    link: "https://drive.google.com",
   },
   {
     id: 3,
     title: "Will be added soon",
     description: "Will be added soon",
-    image: "https://github.com/rvnary/Portofolio/blob/main/justintano/dummy-image.png?raw=true",
+    image:
+      "https://github.com/rvnary/Portofolio/blob/main/justintano/dummy-image.png?raw=true",
     tags: ["Coming", "Coming", "Coming"],
+    link: "https://drive.google.com",
   },
   {
     id: 4,
     title: "Will be added soon",
     description: "Will be added soon",
-    image: "https://github.com/rvnary/Portofolio/blob/main/justintano/dummy-image.png?raw=true",
+    image:
+      "https://github.com/rvnary/Portofolio/blob/main/justintano/dummy-image.png?raw=true",
     tags: ["Coming", "Coming", "Coming"],
+    link: "https://drive.google.com",
   },
   {
     id: 5,
     title: "Will be added soon",
     description: "Will be added soon",
-    image: "https://github.com/rvnary/Portofolio/blob/main/justintano/dummy-image.png?raw=true",
+    image:
+      "https://github.com/rvnary/Portofolio/blob/main/justintano/dummy-image.png?raw=true",
     tags: ["Coming", "Coming", "Coming"],
+    link: "https://drive.google.com",
   },
 ];
 
 export function Projects() {
   return (
-    <section id="projects" className="relative z-20 mt-[50vh] py-20 px-6" style={{ backgroundColor: '#E8D9D4' }}>
+    <section
+      id="projects"
+      className="relative z-20 mt-[50vh] py-20 px-6"
+      style={{ backgroundColor: "#E8D9D4" }}
+    >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="mb-4">Featured Projects</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            A selection of my recent work showcasing various skills in design and development
+            A selection of my recent work showcasing various skills in design
+            and development
           </p>
         </div>
 
@@ -55,7 +70,7 @@ export function Projects() {
             <div
               key={project.id}
               className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group"
-              style={{ backgroundColor: '#F8EFEA' }}
+              style={{ backgroundColor: "#F8EFEA" }}
             >
               <div className="relative h-64 overflow-hidden">
                 <ImageWithFallback
@@ -66,9 +81,7 @@ export function Projects() {
               </div>
               <div className="p-6">
                 <h3 className="mb-3">{project.title}</h3>
-                <p className="text-gray-600 mb-4">
-                  {project.description}
-                </p>
+                <p className="text-gray-600 mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
                     <span
@@ -80,10 +93,15 @@ export function Projects() {
                   ))}
                 </div>
                 <div className="flex gap-4">
-                  <button className="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition-colors">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition-colors"
+                  >
                     <ExternalLink size={18} />
                     View Project
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
