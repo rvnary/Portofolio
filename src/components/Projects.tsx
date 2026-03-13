@@ -17,35 +17,8 @@ const projects = [
     description: "Will be added soon",
     image:
       "https://github.com/rvnary/Portofolio/blob/main/justintano/dummy-image.png?raw=true",
-    tags: ["Coming", "Coming", "Coming"],
-    link: "https://drive.google.com",
-  },
-  {
-    id: 3,
-    title: "Will be added soon",
-    description: "Will be added soon",
-    image:
-      "https://github.com/rvnary/Portofolio/blob/main/justintano/dummy-image.png?raw=true",
-    tags: ["Coming", "Coming", "Coming"],
-    link: "https://drive.google.com",
-  },
-  {
-    id: 4,
-    title: "Will be added soon",
-    description: "Will be added soon",
-    image:
-      "https://github.com/rvnary/Portofolio/blob/main/justintano/dummy-image.png?raw=true",
-    tags: ["Coming", "Coming", "Coming"],
-    link: "https://drive.google.com",
-  },
-  {
-    id: 5,
-    title: "Will be added soon",
-    description: "Will be added soon",
-    image:
-      "https://github.com/rvnary/Portofolio/blob/main/justintano/dummy-image.png?raw=true",
-    tags: ["Coming", "Coming", "Coming"],
-    link: "https://drive.google.com",
+    tags: ["Design", "Website", "Finance"],
+    link: "https://financial-manage-dwivan.vercel.app/",
   },
 ];
 
