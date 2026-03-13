@@ -16,7 +16,7 @@ const projects = [
     title: "Will be added soon",
     description: "Will be added soon",
     image:
-      "https://github.com/rvnary/Portofolio/blob/main/justintano/dummy-image.png?raw=true",
+      "https://raw.githubusercontent.com/rvnary/Portofolio/refs/heads/main/justintano/F9566392-7F07-4605-A99C-0DADA6D692F5.webp",
     tags: ["Design", "Website", "Finance"],
     link: "https://financial-manage-dwivan.vercel.app/",
   },
